@@ -1,0 +1,32 @@
+<div class="inscription-container">
+  <form [formGroup]="inscriptionForm" (ngSubmit)="onSubmit()">
+    <h2>Créer un compte</h2>
+
+    <div class="input-group">
+      <label> Nom :</label>
+      <input type="text" formControlName="nom" placeholder="Entrez votre nom">
+    </div>
+
+    <div class="input-group">
+      <label> Email :</label>
+      <input type="email" formControlName="email" placeholder="Entrez votre email">
+    </div>
+
+    <div class="input-group">
+      <label> Mot de passe :</label>
+      <input type="password" formControlName="password" placeholder="Créez un mot de passe">
+    </div>
+
+    <div class="input-group">
+      <label> Confirmer le mot de passe :</label>
+      <input type="password" formControlName="confirmPassword" placeholder="Confirmez votre mot de passe">
+    </div>
+
+    <button type="submit" [disabled]="inscriptionForm.invalid"> S'inscrire</button>
+
+    <!-- Message de retour (succès/erreur) -->
+    <p *ngIf="message" class="message">{{ message }}</p>
+
+    <p>Déjà un compte ? <button class="link" type="button" (click)="goToConnexion()">Se connecter</button></p>
+  </form>
+</div>
