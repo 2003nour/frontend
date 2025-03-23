@@ -1,0 +1,21 @@
+<div class="accueil-container mat-typography">
+  <mat-card class="intro-card">
+    <h1>Bienvenue sur <strong>Muscu App</strong> 💪</h1>
+    <p>
+      Rejoignez notre communauté de sportifs, suivez vos entraînements, défiez vos amis,
+      et atteignez vos objectifs plus vite !
+    </p>
+
+    <button class="btn-commencer" (click)="commencer()">
+      🚀 Commencer maintenant
+    </button>
+  </mat-card>
+
+  <div class="temoignages-section" *ngIf="messages.length">
+    <h2>💬 Témoignages de nos utilisateurs</h2>
+    <mat-card class="temoignage" *ngFor="let m of messages">
+      <p>« {{ m.message }} »</p>
+      <small>- {{ m.nom }}</small>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+    <span>🏋️ Muscu App</span>
+    <span class="spacer"></span>
+    <button mat-button [routerLink]="['/dashboard']">Dashboard</button>
+    <button mat-button [routerLink]="['/training']">Entraînements</button>
+    <button mat-button [routerLink]="['/stats']">Statistiques</button>
+    <button mat-button [routerLink]="['/forum']">Forum</button>
+    <button mat-button [routerLink]="['/challenges']">Défis</button>
+    <button mat-button (click)="logout()">Déconnexion</button>
+    <button mat-button [routerLink]="['/parametres']">Paramètres</button>
+    <button mat-button [routerLink]="['/messages']">Messages</button>
+
+  </mat-toolbar>
+  
+  <router-outlet></router-outlet>
+  

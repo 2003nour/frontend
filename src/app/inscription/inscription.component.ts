@@ -13,14 +13,18 @@ import { AuthService } from '../services/auth.service';
 })
 export class InscriptionComponent {
   inscriptionForm: FormGroup;
-  message: string = '';  //  Message d'erreur ou de succès
-  
+  message: string = '';
+
   constructor(private fb: FormBuilder, private router: Router, private authService: AuthService) {
     this.inscriptionForm = this.fb.group({
       nom: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmPassword: ['', Validators.required]
+      confirmPassword: ['', Validators.required],
+      age: ['', [Validators.required, Validators.min(10)]],
+      poids: ['', [Validators.required, Validators.min(30)]],
+      taille: ['', [Validators.required, Validators.min(100)]],
+      sexe: ['', Validators.required]
     });
   }
 
@@ -29,7 +33,7 @@ export class InscriptionComponent {
       this.authService.register(this.inscriptionForm.value).subscribe({
         next: (response) => {
           this.message = '✅ Inscription réussie ! Redirection en cours...';
-          setTimeout(() => this.router.navigate(['/connexion']), 2000); // Redirige après 2s
+          setTimeout(() => this.router.navigate(['/connexion']), 2000);
         },
         error: (err) => {
           this.message = err.error.message || '❌ Une erreur est survenue. Veuillez réessayer.';

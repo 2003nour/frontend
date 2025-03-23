@@ -1,0 +1,70 @@
+.accueil-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+  }
+  
+  .intro-card {
+    padding: 40px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    background-color: white;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+  }
+  
+  button {
+    font-size: 1em;
+    padding: 12px 24px;
+  }
+  .btn-commencer {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+    padding: 14px 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-commencer:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+  }
+  .temoignages-section {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .temoignages-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .temoignage {
+    margin: 10px auto;
+    padding: 20px;
+    max-width: 500px;
+    background-color: #333; /* fond sombre */
+    color: white;           /* ✅ texte en blanc */
+    border-radius: 15px;
+    font-size: 1.1em;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
